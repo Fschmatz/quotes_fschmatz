@@ -17,7 +17,7 @@ class _HomeState extends State<Home> {
   bool loading = true;
   String apiUrl = 'https://quote-garden.herokuapp.com/api/v3/quotes/random';
   Quote quoteFromApi = Quote(author: '', text: '');
-  TextStyle quoteStyle = const TextStyle(fontSize:20,fontWeight: FontWeight.w700);
+  TextStyle quoteStyle = const TextStyle(fontSize:22,fontWeight: FontWeight.w700);
 
   @override
   void initState() {
@@ -69,14 +69,29 @@ class _HomeState extends State<Home> {
                     color: Theme.of(context).accentColor,
                   ),
                 )
-              : Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: Center(
-                    child:
-                        Text(quoteFromApi.text + '\n\n'+quoteFromApi.author,
-                          style: quoteStyle,
-                        textAlign: TextAlign.center,)
-          ),
+              : Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Icon(Icons.format_quote_rounded)),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(30.0),
+                    child: Text(quoteFromApi.text + '\n\n'+quoteFromApi.author,
+                      style: quoteStyle,
+                    textAlign: TextAlign.center,),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Align(
+                      alignment: Alignment.bottomRight,
+                        child: Icon(Icons.format_quote_rounded)),
+                  ),
+                ],
               )
       ),
       floatingActionButton: FloatingActionButton(
