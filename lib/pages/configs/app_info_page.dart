@@ -92,7 +92,7 @@ class AppInfoPage extends StatelessWidget {
           const ListTile(
             leading: Icon(Icons.messenger_outline),
             title: Text(
-              "That's what the app do",
+              "That's what the app do.",
               style: TextStyle(fontSize: 16),
             ),
           ),

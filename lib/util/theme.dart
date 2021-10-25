@@ -4,11 +4,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 //CLARO
 ThemeData light = ThemeData(
   brightness: Brightness.light,
-  primaryColor: const Color(0xFFFFFDFD),
+  primaryColor: const Color(0xFFFFFBFB),
   accentColor: Colors.brown,
-  scaffoldBackgroundColor: const Color(0xFFFFFDFD),
+  scaffoldBackgroundColor: const Color(0xFFFFFBFB),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFFFFFDFD),
+      color: Color(0xFFFFFBFB),
       elevation: 0,
       iconTheme: IconThemeData(
           color: Color(0xFF000000)
@@ -18,20 +18,18 @@ ThemeData light = ThemeData(
           fontWeight: FontWeight.w600,
           color: Color(0xFF000000))),
   cardTheme: const CardTheme(
-    color: Color(0xFFF3F1F1),
+    color: Color(0xFFF5F1F1),
+  ),
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    backgroundColor: Color(0xFFEFEBEB),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    selectedIconTheme: IconThemeData(color: Colors.brown),
-    selectedLabelStyle: TextStyle(color: Colors.brown),
-    showSelectedLabels: false,
-    showUnselectedLabels: false,
-    backgroundColor: Colors.black12,
+    backgroundColor: Colors.black26,
   ),
   accentTextTheme: const TextTheme(
     headline1: TextStyle(color: Colors.brown),
-    headline2: TextStyle(color: Color(0xFFF3F1F1)),
+    headline2: TextStyle(color: Color(0xFFF5F1F1)),
   ),
-  bottomAppBarColor: const Color(0xFFE8E6E6),
 );
 
 //ESCURO
@@ -46,20 +44,18 @@ ThemeData dark = ThemeData(
       titleTextStyle: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Color(0xFFFFFDFD))),
+          color: Color(0xFFFFFBFB))),
   cardTheme: const CardTheme(
     color: Color(0xFF323030),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    selectedIconTheme: IconThemeData(color: Color(0xFF6A5952)),
-    selectedLabelStyle: TextStyle(color: Color(0xFF6A5952)),
-    showSelectedLabels: false,
-    showUnselectedLabels: false,
     backgroundColor: Color(0xFF1D1B1B),
   ),
-  bottomAppBarColor: const Color(0xFF171515),
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    backgroundColor: Color(0xFF343030),
+  ),
   accentTextTheme: const TextTheme(
-    headline1: TextStyle(color: Color(0xFF6A5952)),
+    headline1: TextStyle(color: Color(0xFF7a6f6a)),
     headline2: TextStyle(color: Color(0xFF000000)),
   ),
 );

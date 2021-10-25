@@ -89,8 +89,9 @@ class _HomeState extends State<Home> {
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(15)),
         ),
-        child: const Icon(
+        child: Icon(
           Icons.refresh_outlined,
+          color: Theme.of(context).accentColor,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
