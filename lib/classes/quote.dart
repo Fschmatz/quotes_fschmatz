@@ -11,8 +11,8 @@ class Quote {
     final value = DynamicValue(json);
 
     return Quote(
-      text: value['data'][0]['quoteText'].toString(),
-      author: value['data'][0]['quoteAuthor'].toString(),
+      text: value['content'].toString(),
+      author: value['author'].toString(),
     );
   }
 

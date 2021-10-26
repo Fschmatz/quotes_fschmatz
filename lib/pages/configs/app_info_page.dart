@@ -6,7 +6,7 @@ class AppInfoPage extends StatelessWidget {
   const AppInfoPage({Key? key}) : super(key: key);
 
   _launchGithub() async {
-    const url = '';
+    const url = 'https://github.com/Fschmatz/quotes_fschmatz';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -32,11 +32,11 @@ class AppInfoPage extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Center(
-            child: Text(Changelog.appName +" "+ Changelog.appVersion,
+            child: Text(Changelog.appName + " " + Changelog.appVersion,
                 style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.w700,
-                    color: Theme.of(context).accentColor)),
+                    color: Theme.of(context).colorScheme.secondary)),
           ),
           const SizedBox(height: 15),
           const Divider(),
@@ -48,10 +48,10 @@ class AppInfoPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
-                    color: Theme.of(context).accentColor)),
+                    color: Theme.of(context).colorScheme.secondaryVariant)),
           ),
           const ListTile(
-            leading: Icon( Icons.info_outline),
+            leading: Icon(Icons.info_outline),
             title: Text(
               "Application created using Flutter and the Dart language, used for testing and learning.",
               style: TextStyle(
@@ -68,15 +68,16 @@ class AppInfoPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
-                    color: Theme.of(context).accentColor)),
+                    color: Theme.of(context).colorScheme.secondaryVariant)),
           ),
           ListTile(
-            onTap: () {_launchGithub();},
+            onTap: () {
+              _launchGithub();
+            },
             leading: const Icon(Icons.open_in_new_outlined),
             title: const Text("View on GitHub",
                 style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    color: Colors.blue)),
+                    decoration: TextDecoration.underline, color: Colors.blue)),
           ),
           const Divider(),
           ListTile(
@@ -87,7 +88,7 @@ class AppInfoPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
-                    color: Theme.of(context).accentColor)),
+                    color: Theme.of(context).colorScheme.secondaryVariant)),
           ),
           const ListTile(
             leading: Icon(Icons.messenger_outline),

@@ -5,17 +5,20 @@ import 'package:flutter/rendering.dart';
 import 'package:http/http.dart' as http;
 import 'package:quotes_fschmatz/classes/quote.dart';
 import 'configs/settings_page.dart';
+import 'dart:math' as math;
 
 class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  // https://quote-garden.herokuapp.com/api/v3/quotes/random ->  API page
+  //https://github.com/lukePeavey/quotable ->  API page
 
   bool loading = true;
-  String apiUrl = 'https://quote-garden.herokuapp.com/api/v3/quotes/random';
+  String apiUrl = 'https://api.quotable.io/random';
   Quote quoteFromApi = Quote(author: '', text: '');
   TextStyle quoteStyle = const TextStyle(fontSize:22,fontWeight: FontWeight.w700);
 
@@ -55,7 +58,7 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                      builder: (BuildContext context) => SettingsPage(),
+                      builder: (BuildContext context) => const SettingsPage(),
                       fullscreenDialog: true,
                     ));
               }),
@@ -66,18 +69,21 @@ class _HomeState extends State<Home> {
           child: loading
               ? Center(
                   child: CircularProgressIndicator(
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 )
               : Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.all(20.0),
+                   Padding(
+                    padding: const EdgeInsets.all(20.0),
                     child: Align(
                         alignment: Alignment.topLeft,
-                        child: Icon(Icons.format_quote_rounded)),
+                        child: Transform(
+                            alignment: Alignment.center,
+                            transform: Matrix4.rotationY(math.pi),
+                            child: const Icon(Icons.format_quote_rounded))),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(30.0),
@@ -106,7 +112,7 @@ class _HomeState extends State<Home> {
         ),
         child: Icon(
           Icons.refresh_outlined,
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).colorScheme.secondaryVariant,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,

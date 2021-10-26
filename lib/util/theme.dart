@@ -4,11 +4,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 //CLARO
 ThemeData light = ThemeData(
   brightness: Brightness.light,
-  primaryColor: const Color(0xFFFFFBFB),
-  accentColor: Colors.brown,
-  scaffoldBackgroundColor: const Color(0xFFFFFBFB),
+  primaryColor: const Color(0xFFFFF9F9),
+  colorScheme: ColorScheme.light(
+      secondary: Colors.brown[700]!,
+      secondaryVariant: Colors.brown,
+  ),
+  scaffoldBackgroundColor: const Color(0xFFFFF9F9),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFFFFFBFB),
+      color: Color(0xFFFFF9F9),
       elevation: 0,
       iconTheme: IconThemeData(
           color: Color(0xFF000000)
@@ -21,14 +24,10 @@ ThemeData light = ThemeData(
     color: Color(0xFFF5F1F1),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFFEFEBEB),
+    backgroundColor: Color(0xFFE9E3E3),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: Colors.black26,
-  ),
-  accentTextTheme: const TextTheme(
-    headline1: TextStyle(color: Colors.brown),
-    headline2: TextStyle(color: Color(0xFFF5F1F1)),
+    backgroundColor: Colors.black38,
   ),
 );
 
@@ -36,7 +35,10 @@ ThemeData light = ThemeData(
 ThemeData dark = ThemeData(
   brightness: Brightness.dark,
   primaryColor: const Color(0xFF222020),
-  accentColor: const Color(0xFF6A5952),
+  colorScheme: const ColorScheme.dark(
+    secondary: Color(0xFF6A5952),
+    secondaryVariant: Color(0xFFad8b84)
+  ),
   scaffoldBackgroundColor: const Color(0xFF222020),
   appBarTheme: const AppBarTheme(
       color: Color(0xFF222020),
@@ -44,7 +46,7 @@ ThemeData dark = ThemeData(
       titleTextStyle: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Color(0xFFFFFBFB))),
+          color: Color(0xFFFFF9F9))),
   cardTheme: const CardTheme(
     color: Color(0xFF323030),
   ),
@@ -52,11 +54,7 @@ ThemeData dark = ThemeData(
     backgroundColor: Color(0xFF1D1B1B),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFF343030),
-  ),
-  accentTextTheme: const TextTheme(
-    headline1: TextStyle(color: Color(0xFF7a6f6a)),
-    headline2: TextStyle(color: Color(0xFF000000)),
+    backgroundColor: Color(0xFF383434),
   ),
 );
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_fschmatz/util/changelog.dart';
 
-
 class ChangelogPage extends StatelessWidget {
   const ChangelogPage({Key? key}) : super(key: key);
 
@@ -20,7 +19,7 @@ class ChangelogPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.w700,
-                      color: Theme.of(context).accentColor))),
+                      color: Theme.of(context).colorScheme.secondaryVariant))),
           ListTile(
             leading: const Icon(
               Icons.article_outlined,
@@ -39,7 +38,7 @@ class ChangelogPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 13,
                     fontWeight: FontWeight.w700,
-                    color: Theme.of(context).accentColor)),
+                    color: Theme.of(context).colorScheme.secondaryVariant)),
           ),
           ListTile(
             leading: const Icon(

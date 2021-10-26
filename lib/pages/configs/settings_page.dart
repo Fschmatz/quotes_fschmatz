@@ -10,7 +10,7 @@ class SettingsPage extends StatefulWidget {
   @override
   _SettingsPageState createState() => _SettingsPageState();
 
-  SettingsPage({Key? key}) : super(key: key);
+  const SettingsPage({Key? key}) : super(key: key);
 }
 
 class _SettingsPageState extends State<SettingsPage> {
@@ -32,7 +32,7 @@ class _SettingsPageState extends State<SettingsPage> {
               Card(
                 elevation: 1,
                 margin: const EdgeInsets.fromLTRB(16, 20, 16, 25),
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
@@ -53,7 +53,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
-                        color: Theme.of(context).accentColor)),
+                        color: Theme.of(context).colorScheme.secondaryVariant)),
               ),
               ListTile(
                 leading: const Icon(
@@ -87,7 +87,8 @@ class _SettingsPageState extends State<SettingsPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute<void>(
-                        builder: (BuildContext context) => const ChangelogPage(),
+                        builder: (BuildContext context) =>
+                            const ChangelogPage(),
                         fullscreenDialog: true,
                       ));
                 },
@@ -101,7 +102,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
-                        color: Theme.of(context).accentColor)),
+                        color: Theme.of(context).colorScheme.secondaryVariant)),
               ),
               Consumer<ThemeNotifier>(
                 builder: (context, notifier, child) => SwitchListTile(
