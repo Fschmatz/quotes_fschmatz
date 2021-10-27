@@ -115,7 +115,7 @@ class _HomeState extends State<Home> {
           color: Theme.of(context).colorScheme.secondaryVariant,
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

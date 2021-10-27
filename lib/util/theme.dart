@@ -4,14 +4,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 //CLARO
 ThemeData light = ThemeData(
   brightness: Brightness.light,
-  primaryColor: const Color(0xFFFFF9F9),
+  primaryColor: const Color(0xFFFFF7F7),
   colorScheme: ColorScheme.light(
-      secondary: Colors.brown[700]!,
-      secondaryVariant: Colors.brown,
+      secondary: Colors.brown.shade400,
+      secondaryVariant: Colors.brown.shade600,
   ),
-  scaffoldBackgroundColor: const Color(0xFFFFF9F9),
+  scaffoldBackgroundColor: const Color(0xFFFFF7F7),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFFFFF9F9),
+      color: Color(0xFFFFF7F7),
       elevation: 0,
       iconTheme: IconThemeData(
           color: Color(0xFF000000)
@@ -21,40 +21,40 @@ ThemeData light = ThemeData(
           fontWeight: FontWeight.w600,
           color: Color(0xFF000000))),
   cardTheme: const CardTheme(
-    color: Color(0xFFF5F1F1),
+    color: Color(0xFFF6F0F0),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFFE9E3E3),
+    backgroundColor: Color(0xFFE9E0E0),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: Colors.black38,
+    backgroundColor: Color(0xFFD9D0D0),
   ),
 );
 
 //ESCURO
 ThemeData dark = ThemeData(
   brightness: Brightness.dark,
-  primaryColor: const Color(0xFF222020),
+  primaryColor: const Color(0xFF232020),
   colorScheme: const ColorScheme.dark(
     secondary: Color(0xFF6A5952),
     secondaryVariant: Color(0xFFad8b84)
   ),
-  scaffoldBackgroundColor: const Color(0xFF222020),
+  scaffoldBackgroundColor: const Color(0xFF232020),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFF222020),
+      color: Color(0xFF232020),
       elevation: 0,
       titleTextStyle: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Color(0xFFFFF9F9))),
+          color: Color(0xFFFFF7F7))),
   cardTheme: const CardTheme(
-    color: Color(0xFF323030),
+    color: Color(0xFF333030),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: Color(0xFF1D1B1B),
+    backgroundColor: Color(0xFF1D1A1A),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFF383434),
+    backgroundColor: Color(0xFF393434),
   ),
 );
 
