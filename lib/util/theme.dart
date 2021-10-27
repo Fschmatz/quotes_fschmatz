@@ -4,14 +4,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 //CLARO
 ThemeData light = ThemeData(
   brightness: Brightness.light,
-  primaryColor: const Color(0xFFFFF7F7),
+  primaryColor: const Color(0xFFF0E7E5),
   colorScheme: ColorScheme.light(
       secondary: Colors.brown.shade400,
       secondaryVariant: Colors.brown.shade600,
   ),
-  scaffoldBackgroundColor: const Color(0xFFFFF7F7),
+  scaffoldBackgroundColor: const Color(0xFFF0E7E5),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFFFFF7F7),
+      color: Color(0xFFF0E7E5),
       elevation: 0,
       iconTheme: IconThemeData(
           color: Color(0xFF000000)
@@ -21,13 +21,13 @@ ThemeData light = ThemeData(
           fontWeight: FontWeight.w600,
           color: Color(0xFF000000))),
   cardTheme: const CardTheme(
-    color: Color(0xFFF6F0F0),
+    color: Color(0xFFE6E0E0),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
     backgroundColor: Color(0xFFE9E0E0),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: Color(0xFFD9D0D0),
+    backgroundColor: Color(0xFFE9E0E0),
   ),
 );
 
@@ -46,7 +46,7 @@ ThemeData dark = ThemeData(
       titleTextStyle: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
-          color: Color(0xFFFFF7F7))),
+          color: Color(0xFFFFFFFF))),
   cardTheme: const CardTheme(
     color: Color(0xFF333030),
   ),

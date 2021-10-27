@@ -20,7 +20,6 @@ class _HomeState extends State<Home> {
   bool loading = true;
   String apiUrl = 'https://api.quotable.io/random';
   Quote quoteFromApi = Quote(author: '', text: '');
-  TextStyle quoteStyle = const TextStyle(fontSize:22,fontWeight: FontWeight.w700);
 
   @override
   void initState() {
@@ -73,33 +72,50 @@ class _HomeState extends State<Home> {
                   ),
                 )
               : Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                   Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Transform(
-                            alignment: Alignment.center,
-                            transform: Matrix4.rotationY(math.pi),
-                            child: const Icon(Icons.format_quote_rounded))),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(30.0),
-                    child: Text(quoteFromApi.text + '\n\n'+quoteFromApi.author,
-                      style: quoteStyle,
-                    textAlign: TextAlign.center,),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(20.0),
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                        child: Icon(Icons.format_quote_rounded)),
-                  ),
-                ],
-              )
-      ),
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Transform(
+                              alignment: Alignment.center,
+                              transform: Matrix4.rotationY(math.pi),
+                              child: const Icon(Icons.format_quote_rounded))),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(30.0),
+                      child: Text(
+                        quoteFromApi.text,
+                        style: const TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.w700),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                      child: Text(
+                        quoteFromApi.author,
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context)
+                                .textTheme
+                                .headline6!
+                                .color!
+                                .withOpacity(0.8)),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.all(20.0),
+                      child: Align(
+                          alignment: Alignment.bottomRight,
+                          child: Icon(Icons.format_quote_rounded)),
+                    ),
+                  ],
+                )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
