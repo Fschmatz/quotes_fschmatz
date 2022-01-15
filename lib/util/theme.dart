@@ -4,17 +4,18 @@ import 'package:shared_preferences/shared_preferences.dart';
 //CLARO
 ThemeData light = ThemeData(
   brightness: Brightness.light,
-  primaryColor: const Color(0xFFF0E7E5),
+  primaryColorBrightness: Brightness.dark,
+  primaryColor: const Color(0xFFD9D7D7),
   colorScheme: ColorScheme.light(
       secondary: Colors.brown.shade400,
       secondaryVariant: Colors.brown.shade600,
   ),
-  scaffoldBackgroundColor: const Color(0xFFF0E7E5),
+  scaffoldBackgroundColor: const Color(0xFFD9D7D7),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFFF0E7E5),
+      color: Color(0xFFD9D7D7),
       elevation: 0,
       iconTheme: IconThemeData(
-          color: Color(0xFF000000)
+          color: Color(0xFF050505)
       ),
       titleTextStyle: TextStyle(
           fontSize: 20,
@@ -24,7 +25,7 @@ ThemeData light = ThemeData(
     color: Color(0xFFE6E0E0),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFFE9E0E0),
+    backgroundColor: Color(0xFFEFEDED),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: Color(0xFFE9E0E0),
@@ -34,27 +35,29 @@ ThemeData light = ThemeData(
 //ESCURO
 ThemeData dark = ThemeData(
   brightness: Brightness.dark,
-  primaryColor: const Color(0xFF232020),
+  primaryColorBrightness: Brightness.light,
+  primaryColor: const Color(0xFF242222),
   colorScheme: const ColorScheme.dark(
     secondary: Color(0xFF6A5952),
     secondaryVariant: Color(0xFFad8b84)
   ),
-  scaffoldBackgroundColor: const Color(0xFF232020),
+  scaffoldBackgroundColor: const Color(0xFF242222),
   appBarTheme: const AppBarTheme(
-      color: Color(0xFF232020),
+      color: Color(0xFF242222),
       elevation: 0,
+      iconTheme: IconThemeData(color: Color(0xFFF5F5F5)),
       titleTextStyle: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w600,
           color: Color(0xFFFFFFFF))),
   cardTheme: const CardTheme(
-    color: Color(0xFF333030),
+    color: Color(0xFF343232),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     backgroundColor: Color(0xFF1D1A1A),
   ),
   floatingActionButtonTheme: const FloatingActionButtonThemeData(
-    backgroundColor: Color(0xFF393434),
+    backgroundColor: Color(0xFF343232),
   ),
 );
 

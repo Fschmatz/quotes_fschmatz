@@ -45,11 +45,6 @@ class _HomeState extends State<Home> {
         title: const Text('Quotes Fschmatz'),
         actions: [
           IconButton(
-              color: Theme.of(context)
-                  .textTheme
-                  .headline6!
-                  .color!
-                  .withOpacity(0.8),
               icon: const Icon(
                 Icons.settings_outlined,
               ),
@@ -98,8 +93,8 @@ class _HomeState extends State<Home> {
                       child: Text(
                         quoteFromApi.author,
                         style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w700,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
                             color: Theme.of(context)
                                 .textTheme
                                 .headline6!
@@ -109,7 +104,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     const Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
                       child: Align(
                           alignment: Alignment.bottomRight,
                           child: Icon(Icons.format_quote_rounded)),
@@ -124,7 +119,7 @@ class _HomeState extends State<Home> {
           getQuote();
         },
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+          borderRadius: BorderRadius.all(Radius.circular(16)),
         ),
         child: Icon(
           Icons.refresh_outlined,
